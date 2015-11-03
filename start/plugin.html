@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>插件 | Webpack中文指南</title>
+        <title>插件 | Webpack 中文指南</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.0">
@@ -48,7 +48,7 @@
     <link rel="next" href="../reference.html" />
     
     
-    <link rel="prev" href="../start/loader.html" />
+    <link rel="prev" href="../start/configuration.html" />
     
 
         
@@ -56,7 +56,7 @@
     <body>
         
         
-    <div class="book" data-level="2.4" data-chapter-title="插件" data-filepath="start/plugin.md" data-basepath=".." data-revision="Tue Nov 03 2015 22:17:35 GMT+0800 (CST)">
+    <div class="book" data-level="2.5" data-chapter-title="插件" data-filepath="start/plugin.md" data-basepath=".." data-revision="Tue Nov 03 2015 23:30:20 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -196,14 +196,29 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="start/plugin.html">
+        <li class="chapter " data-level="2.4" data-path="start/configuration.html">
+            
+                
+                    <a href="../start/configuration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="start/plugin.html">
             
                 
                     <a href="../start/plugin.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         插件
                     </a>
@@ -254,7 +269,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Webpack中文指南</a>
+        <a href="../" >Webpack 中文指南</a>
     </h1>
 </div>
 
@@ -268,6 +283,33 @@
 <p>&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x66F4;&#x591A; loader &#x4E0D;&#x80FD;&#x5B8C;&#x6210;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
 <p>&#x63D2;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#x4E00;&#x822C;&#x662F;&#x5728; webpack &#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F; <code>plugins</code> &#x9009;&#x9879;&#x4E2D;&#x6307;&#x5B9A;&#x3002;</p>
 <p>Webpack &#x672C;&#x8EAB;&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; npm &#x5B89;&#x88C5;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5229;&#x7528;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684; <code>BannerPlugin</code> &#x5185;&#x7F6E;&#x63D2;&#x4EF6;&#x6765;&#x5B9E;&#x8DF5;&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x8FD0;&#x884C;&#xFF0C;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x7ED9;&#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5934;&#x90E8;&#x6DFB;&#x52A0;&#x6CE8;&#x91CA;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4FEE;&#x6539; <code>webpack.config.js</code>&#xFF0C;&#x6DFB;&#x52A0; <code>plugins</code>&#xFF1A;</p>
+<pre><code class="lang-js"><span class="token keyword">var</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;webpack&apos;</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token punctuation">:</span> <span class="token string">&apos;./entry.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> __dirname<span class="token punctuation">,</span>
+    filename<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    loaders<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>test<span class="token punctuation">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span> loader<span class="token punctuation">:</span> <span class="token string">&apos;style!css&apos;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>BannerPlugin</span><span class="token punctuation">(</span><span class="token string">&apos;This file is created by zhaoda&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x8FD0;&#x884C; <code>webpack</code>&#xFF0C;&#x6253;&#x5F00; <code>bundle.js</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6587;&#x4EF6;&#x5934;&#x90E8;&#x51FA;&#x73B0;&#x4E86;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x7684;&#x6CE8;&#x91CA;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">/*! This file is created by zhaoda */</span>
+<span class="token comment" spellcheck="true">/******/</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>modules<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// webpackBootstrap</span>
+<span class="token comment" spellcheck="true">/******/</span>  <span class="token comment" spellcheck="true">// The module cache</span>
+<span class="token comment" spellcheck="true">/******/</span>  <span class="token keyword">var</span> installedModules <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// &#x540E;&#x9762;&#x4EE3;&#x7801;&#x7701;&#x7565;</span>
+</code></pre>
 
                     
                     </section>
@@ -278,7 +320,7 @@
         </div>
 
         
-        <a href="../start/loader.html" class="navigation navigation-prev " aria-label="Previous page: Loader"><i class="fa fa-angle-left"></i></a>
+        <a href="../start/configuration.html" class="navigation navigation-prev " aria-label="Previous page: 配置"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../reference.html" class="navigation navigation-next " aria-label="Next page: 参考链接"><i class="fa fa-angle-right"></i></a>

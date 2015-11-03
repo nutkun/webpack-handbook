@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>准备开始 | Webpack 中文指南</title>
+        <title>配置 | Webpack 中文指南</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.0">
@@ -45,10 +45,10 @@
         
     
     
-    <link rel="next" href="../start/install.html" />
+    <link rel="next" href="../start/plugin.html" />
     
     
-    <link rel="prev" href="../what-is-webpack.html" />
+    <link rel="prev" href="../start/loader.html" />
     
 
         
@@ -56,7 +56,7 @@
     <body>
         
         
-    <div class="book" data-level="2" data-chapter-title="准备开始" data-filepath="start/start.md" data-basepath=".." data-revision="Tue Nov 03 2015 23:30:20 GMT+0800 (CST)">
+    <div class="book" data-level="2.4" data-chapter-title="配置" data-filepath="start/configuration.md" data-basepath=".." data-revision="Tue Nov 03 2015 23:30:20 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -135,7 +135,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2" data-path="start/start.html">
+        <li class="chapter " data-level="2" data-path="start/start.html">
             
                 
                     <a href="../start/start.html">
@@ -196,7 +196,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="start/configuration.html">
+        <li class="chapter active" data-level="2.4" data-path="start/configuration.html">
             
                 
                     <a href="../start/configuration.html">
@@ -279,15 +279,49 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/zhaoda/webpack-handbook/tree/master/content/start/start.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;编辑本页</a><h1 id="&#x51C6;&#x5907;&#x5F00;&#x59CB;">&#x51C6;&#x5907;&#x5F00;&#x59CB;</h1>
-<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5177;&#x4F53;&#x6848;&#x4F8B;&#x6765;&#x5FEB;&#x901F;&#x4E0A;&#x624B; Webpack&#x3002;</p>
-<ul>
-<li><a href="install.html">&#x5B89;&#x88C5;</a></li>
-<li><a href="usage.html">&#x4F7F;&#x7528;</a></li>
-<li><a href="loader.html">Loader</a></li>
-<li><a href="configuration.html">&#x914D;&#x7F6E;</a></li>
-<li><a href="plugin.html">&#x63D2;&#x4EF6;</a></li>
-</ul>
+                        <a id="edit-link" href="https://github.com/zhaoda/webpack-handbook/tree/master/content/start/configuration.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;编辑本页</a><h1 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h1>
+<p>Webpack &#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9664;&#x4E86;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6765;&#x6267;&#x884C;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x641C;&#x7D22;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684; <code>webpack.config.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A; node.js &#x6A21;&#x5757;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; json &#x683C;&#x5F0F;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x5BF9;&#x8C61;&#xFF0C;&#x6216;&#x8005;&#x901A;&#x8FC7; <code>--config</code> &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x7EE7;&#x7EED;&#x6211;&#x4EEC;&#x7684;&#x6848;&#x4F8B;&#xFF0C;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA; <code>package.json</code> &#x6765;&#x6DFB;&#x52A0; webpack &#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#xFF1A;</p>
+<pre><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;webpack-example&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;version&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;description&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;A simple webpack example.&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;main&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;bundle.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;scripts&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;test&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;keywords&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;webpack&quot;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;author&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;zhaoda&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;license&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;MIT&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;devDependencies&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;css-loader&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^0.21.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;style-loader&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^0.13.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;webpack&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^1.12.2&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x522B;&#x5FD8;&#x4E86;&#x8FD0;&#x884C; <code>npm install</code>&#x3002;</p>
+<p>&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <code>webpack.config.js</code>&#xFF1A;</p>
+<pre><code class="lang-js"><span class="token keyword">var</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;webpack&apos;</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token punctuation">:</span> <span class="token string">&apos;./entry.js&apos;</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> __dirname<span class="token punctuation">,</span>
+    filename<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    loaders<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>test<span class="token punctuation">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span> loader<span class="token punctuation">:</span> <span class="token string">&apos;style!css&apos;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x540C;&#x65F6;&#x7B80;&#x5316; <code>entry.js</code> &#x4E2D;&#x7684; <code>style.css</code> &#x52A0;&#x8F7D;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code>require(&apos;./style.css&apos;)
+</code></pre><p>&#x6700;&#x540E;&#x8FD0;&#x884C; <code>webpack</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; webpack &#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x548C;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C; <code>webpack entry.js bundle.js --module-bind &apos;css=style!css</code> &#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
 
                     
                     </section>
@@ -298,10 +332,10 @@
         </div>
 
         
-        <a href="../what-is-webpack.html" class="navigation navigation-prev " aria-label="Previous page: 重复的轮子"><i class="fa fa-angle-left"></i></a>
+        <a href="../start/loader.html" class="navigation navigation-prev " aria-label="Previous page: Loader"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../start/install.html" class="navigation navigation-next " aria-label="Next page: 安装"><i class="fa fa-angle-right"></i></a>
+        <a href="../start/plugin.html" class="navigation navigation-next " aria-label="Next page: 插件"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
