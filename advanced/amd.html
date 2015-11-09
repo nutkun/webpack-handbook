@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>安装 | Webpack 中文指南</title>
+        <title>AMD 规范 | Webpack 中文指南</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.0">
@@ -45,10 +45,10 @@
         
     
     
-    <link rel="next" href="../start/usage.html" />
+    <link rel="next" href="../reference.html" />
     
     
-    <link rel="prev" href="../start/start.html" />
+    <link rel="prev" href="../advanced/commonjs.html" />
     
 
         
@@ -56,7 +56,7 @@
     <body>
         
         
-    <div class="book" data-level="2.1" data-chapter-title="安装" data-filepath="start/install.md" data-basepath=".." data-revision="Tue Nov 10 2015 00:43:24 GMT+0800 (CST)">
+    <div class="book" data-level="3.2" data-chapter-title="AMD 规范" data-filepath="advanced/amd.md" data-basepath=".." data-revision="Tue Nov 10 2015 00:43:24 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -151,7 +151,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1" data-path="start/install.html">
+        <li class="chapter " data-level="2.1" data-path="start/install.html">
             
                 
                     <a href="../start/install.html">
@@ -292,7 +292,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="advanced/amd.html">
+        <li class="chapter active" data-level="3.2" data-path="advanced/amd.html">
             
                 
                     <a href="../advanced/amd.html">
@@ -360,28 +360,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h1>
-<p>&#x9996;&#x5148;&#x8981;&#x5B89;&#x88C5; <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a>&#xFF0C; Node.js &#x81EA;&#x5E26;&#x4E86;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668; npm&#xFF0C;Webpack &#x9700;&#x8981; Node.js v0.6 &#x4EE5;&#x4E0A;&#x652F;&#x6301;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x6700;&#x65B0;&#x7248; Node.js&#x3002;</p>
-<p>&#x7528; npm &#x5B89;&#x88C5; Webpack&#xFF1A;</p>
-<pre><code class="lang-bash">$ npm <span class="token function">install</span> webpack <span class="token operator">-</span>g
-</code></pre>
-<p>&#x6B64;&#x65F6; Webpack &#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5230;&#x4E86;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C; <code>webpack -h</code> &#x8BD5;&#x8BD5;&#x3002;</p>
-<p>&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x4F1A;&#x5C06; Webpack &#x5B89;&#x88C5;&#x5230;&#x9879;&#x76EE;&#x7684;&#x4F9D;&#x8D56;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9879;&#x76EE;&#x672C;&#x5730;&#x7248;&#x672C;&#x7684; Webpack&#x3002;</p>
-<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># &#x8FDB;&#x5165;&#x9879;&#x76EE;&#x76EE;&#x5F55;
-</span><span class="token comment" spellcheck="true"># &#x786E;&#x5B9A;&#x5DF2;&#x7ECF;&#x6709; package.json&#xFF0C;&#x6CA1;&#x6709;&#x5C31;&#x901A;&#x8FC7; npm init &#x521B;&#x5EFA;
-</span><span class="token comment" spellcheck="true"># &#x5B89;&#x88C5; webpack &#x4F9D;&#x8D56;
-</span>$ npm <span class="token function">install</span> webpack <span class="token operator">--</span>save<span class="token operator">-</span>dev
-</code></pre>
-<p>Webpack &#x76EE;&#x524D;&#x6709;&#x4E24;&#x4E2A;&#x4E3B;&#x7248;&#x672C;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5728; master &#x4E3B;&#x5E72;&#x7684;&#x7A33;&#x5B9A;&#x7248;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5728; webpack-2 &#x5206;&#x652F;&#x7684;&#x6D4B;&#x8BD5;&#x7248;&#xFF0C;&#x6D4B;&#x8BD5;&#x7248;&#x62E5;&#x6709;&#x4E00;&#x4E9B;&#x5B9E;&#x9A8C;&#x6027;&#x529F;&#x80FD;&#x5E76;&#x4E14;&#x548C;&#x7A33;&#x5B9A;&#x7248;&#x4E0D;&#x517C;&#x5BB9;&#xFF0C;&#x5728;&#x6B63;&#x5F0F;&#x9879;&#x76EE;&#x4E2D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x7A33;&#x5B9A;&#x7248;&#x3002;</p>
-<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># &#x67E5;&#x770B; webpack &#x7248;&#x672C;&#x4FE1;&#x606F;
-</span>$ npm info webpack
-
-<span class="token comment" spellcheck="true"># &#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x7684; webpack
-</span>$ npm <span class="token function">install</span> webpack@<span class="token number">1.12</span><span class="token punctuation">.</span>x <span class="token operator">--</span>save<span class="token operator">-</span>dev
-</code></pre>
-<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x4F7F;&#x7528; Webpack &#x5F00;&#x53D1;&#x5DE5;&#x5177;&#xFF0C;&#x8981;&#x5355;&#x72EC;&#x5B89;&#x88C5;&#xFF1A;</p>
-<pre><code class="lang-bash">$ npm <span class="token function">install</span> webpack<span class="token operator">-</span>dev<span class="token operator">-</span>server <span class="token operator">--</span>save<span class="token operator">-</span>dev
-</code></pre>
+                        <h1 id="amd-&#x89C4;&#x8303;">AMD &#x89C4;&#x8303;</h1>
 
                     
                     </section>
@@ -392,10 +371,10 @@
         </div>
 
         
-        <a href="../start/start.html" class="navigation navigation-prev " aria-label="Previous page: 准备开始"><i class="fa fa-angle-left"></i></a>
+        <a href="../advanced/commonjs.html" class="navigation navigation-prev " aria-label="Previous page: CommonJS 规范"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../start/usage.html" class="navigation navigation-next " aria-label="Next page: 使用"><i class="fa fa-angle-right"></i></a>
+        <a href="../reference.html" class="navigation navigation-next " aria-label="Next page: 参考链接"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
