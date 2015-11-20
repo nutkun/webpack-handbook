@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -52,7 +56,7 @@
     <body>
         
         
-    <div class="book" data-level="2.2" data-chapter-title="使用" data-filepath="usage.md" data-basepath="." data-revision="Sun Nov 15 2015 01:00:20 GMT+0800 (CST)">
+    <div class="book" data-level="2.2" data-chapter-title="使用" data-filepath="usage.md" data-basepath="." data-revision="Sat Nov 21 2015 01:55:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -356,23 +360,23 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/zhaoda/webpack-handbook/edit/master/content/usage.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;编辑本页</a><h1 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h1>
+                        <h1 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h1>
 <p>&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x9875;&#x9762; index.html &#x548C;&#x4E00;&#x4E2A; JS &#x5165;&#x53E3;&#x6587;&#x4EF6; entry.js&#xFF1A;</p>
-<pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- index.html --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bundle.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- index.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;utf-8&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;bundle.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-js"><span class="token comment" spellcheck="true">// entry.js</span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&apos;It works.&apos;</span><span class="token punctuation">)</span>
+<pre><code class="lang-js"><span class="hljs-comment">// entry.js</span>
+<span class="hljs-built_in">document</span>.write(<span class="hljs-string">&apos;It works.&apos;</span>)
 </code></pre>
 <p>&#x7136;&#x540E;&#x7F16;&#x8BD1; entry.js &#x5E76;&#x6253;&#x5305;&#x5230; bundle.js&#xFF1A;</p>
-<pre><code class="lang-bash">$ webpack entry<span class="token punctuation">.</span>js bundle<span class="token punctuation">.</span>js
+<pre><code class="lang-bash">$ webpack entry.js bundle.js
 </code></pre>
 <p>&#x6253;&#x5305;&#x8FC7;&#x7A0B;&#x4F1A;&#x663E;&#x793A;&#x65E5;&#x5FD7;&#xFF1A;</p>
 <pre><code>Hash: e964f90ec65eb2c29bb9
@@ -383,12 +387,12 @@ bundle.js  1.42 kB       0  [emitted]  main
    [0] ./entry.js 27 bytes {0} [built]
 </code></pre><p>&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00; <code>index.html</code> &#x5C06;&#x4F1A;&#x770B;&#x5230; <code>It works.</code> &#x3002;</p>
 <p>&#x63A5;&#x4E0B;&#x6765;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6A21;&#x5757; <code>module.js</code> &#x5E76;&#x4FEE;&#x6539;&#x5165;&#x53E3; <code>entry.js</code>&#xFF1A;</p>
-<pre><code class="lang-js"><span class="token comment" spellcheck="true">// module.js</span>
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token string">&apos;It works from module.js.&apos;</span>
+<pre><code class="lang-js"><span class="hljs-comment">// module.js</span>
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-string">&apos;It works from module.js.&apos;</span>
 </code></pre>
-<pre><code class="lang-js"><span class="token comment" spellcheck="true">// entry.js</span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">&apos;It works.&apos;</span>&apos;<span class="token punctuation">)</span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;./module.js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// &#x6DFB;&#x52A0;&#x6A21;&#x5757;</span>
+<pre><code class="lang-js">// entry.js
+document.write(&apos;It works.&apos;&apos;)
+document.write(require(&apos;./module.js&apos;)) // &#x6DFB;&#x52A0;&#x6A21;&#x5757;
 </code></pre>
 <p>&#x91CD;&#x65B0;&#x6253;&#x5305; <code>webpack entry.js bundle.js</code> &#x540E;&#x5237;&#x65B0;&#x9875;&#x9762;&#x770B;&#x5230;&#x53D8;&#x5316; <code>It works.It works from module.js.</code></p>
 <pre><code>Hash: 279c7601d5d08396e751
@@ -425,7 +429,7 @@ bundle.js  1.57 kB       0  [emitted]  main
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    <script src="gitbook/plugins/gitbook-plugin-editlink/plugin.js"></script>
     
 
     
@@ -454,7 +458,7 @@ bundle.js  1.57 kB       0  [emitted]  main
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"disqus":{"shortName":"webpack-handbook"},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"edit-link":{"base":"https://github.com/zhaoda/webpack-handbook/edit/master/content","label":"编辑本页"},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"ad":{"contentBottom":"%3Cscript%20async%20src%3D%22//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js%22%3E%3C/script%3E%3C%21--%20%u81EA%u9002%u5E94%u9AD8%u53CD%u5DEE%u9ED1%u8272%20--%3E%3Cins%20class%3D%22adsbygoogle%22%20style%3D%22display%3Ablock%22%20data-ad-client%3D%22ca-pub-9798300025848807%22%20data-ad-slot%3D%228607007877%22%20data-ad-format%3D%22auto%22%3E%3C/ins%3E%3Cscript%3E%28adsbygoogle%20%3D%20window.adsbygoogle%20%7C%7C%20%5B%5D%29.push%28%7B%7D%29%3B%3C/script%3E%3C/p%3E%3Cdiv%20id%3D%22disqus_thread%22%3E%3C/div%3E%3Cscript%3E%28function%28%29%20%7Bvar%20d%20%3D%20document%2C%20s%20%3D%20d.createElement%28%27script%27%29%3Bs.src%20%3D%20%27//webpack-handbook.disqus.com/embed.js%27%3Bs.setAttribute%28%27data-timestamp%27%2C%20+new%20Date%28%29%29%3B%28d.head%20%7C%7C%20d.body%29.appendChild%28s%29%3B%7D%29%28%29%3B%3C/script%3E%3Cnoscript%3EPlease%20enable%20JavaScript%20to%20view%20the%20%3Ca%20href%3D%22https%3A//disqus.com/%3Fref_noscript%22%20rel%3D%22nofollow%22%3Ecomments%20powered%20by%20Disqus.%3C/a%3E%3C/noscript%3E"},"sitemap":{"hostname":"http://zhaoda.net/"},"prism":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/edit/master/content","label":"编辑本页","multilingual":false},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"ad":{"contentBottom":"%3Cscript%20async%20src%3D%22//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js%22%3E%3C/script%3E%3C%21--%20%u81EA%u9002%u5E94%u9AD8%u53CD%u5DEE%u9ED1%u8272%20--%3E%3Cins%20class%3D%22adsbygoogle%22%20style%3D%22display%3Ablock%22%20data-ad-client%3D%22ca-pub-9798300025848807%22%20data-ad-slot%3D%228607007877%22%20data-ad-format%3D%22auto%22%3E%3C/ins%3E%3Cscript%3E%28adsbygoogle%20%3D%20window.adsbygoogle%20%7C%7C%20%5B%5D%29.push%28%7B%7D%29%3B%3C/script%3E%3C/p%3E%3Cdiv%20id%3D%22disqus_thread%22%3E%3C/div%3E%3Cscript%3E%28function%28%29%20%7Bvar%20d%20%3D%20document%2C%20s%20%3D%20d.createElement%28%27script%27%29%3Bs.src%20%3D%20%27//webpack-handbook.disqus.com/embed.js%27%3Bs.setAttribute%28%27data-timestamp%27%2C%20+new%20Date%28%29%29%3B%28d.head%20%7C%7C%20d.body%29.appendChild%28s%29%3B%7D%29%28%29%3B%3C/script%3E%3Cnoscript%3EPlease%20enable%20JavaScript%20to%20view%20the%20%3Ca%20href%3D%22https%3A//disqus.com/%3Fref_noscript%22%20rel%3D%22nofollow%22%3Ecomments%20powered%20by%20Disqus.%3C/a%3E%3C/noscript%3E"},"sitemap":{"hostname":"http://zhaoda.net/"},"prism":{},"highlight":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

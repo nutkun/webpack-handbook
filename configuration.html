@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -52,7 +56,7 @@
     <body>
         
         
-    <div class="book" data-level="2.4" data-chapter-title="配置文件" data-filepath="configuration.md" data-basepath="." data-revision="Sun Nov 15 2015 01:00:20 GMT+0800 (CST)">
+    <div class="book" data-level="2.4" data-chapter-title="配置文件" data-filepath="configuration.md" data-basepath="." data-revision="Sat Nov 21 2015 01:55:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -356,48 +360,48 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/zhaoda/webpack-handbook/edit/master/content/configuration.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;编辑本页</a><h1 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h1>
+                        <h1 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h1>
 <p>Webpack &#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9664;&#x4E86;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6765;&#x6267;&#x884C;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x641C;&#x7D22;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684; <code>webpack.config.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A; node.js &#x6A21;&#x5757;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; json &#x683C;&#x5F0F;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x5BF9;&#x8C61;&#xFF0C;&#x6216;&#x8005;&#x901A;&#x8FC7; <code>--config</code> &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</p>
 <p>&#x7EE7;&#x7EED;&#x6211;&#x4EEC;&#x7684;&#x6848;&#x4F8B;&#xFF0C;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA; <code>package.json</code> &#x6765;&#x6DFB;&#x52A0; webpack &#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="token punctuation">{</span>
-  <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;webpack-example&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;version&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;description&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;A simple webpack example.&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;main&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;bundle.js&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;scripts&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">&quot;test&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;keywords&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token string">&quot;webpack&quot;</span>
-  <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;author&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;zhaoda&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;license&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;MIT&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;devDependencies&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">&quot;css-loader&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^0.21.0&quot;</span><span class="token punctuation">,</span>
-    <span class="token string">&quot;style-loader&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^0.13.0&quot;</span><span class="token punctuation">,</span>
-    <span class="token string">&quot;webpack&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;^1.12.2&quot;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<pre><code class="lang-js">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;webpack-example&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;A simple webpack example.&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;bundle.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-string">&quot;keywords&quot;</span>: [
+    <span class="hljs-string">&quot;webpack&quot;</span>
+  ],
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;zhaoda&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>,
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;css-loader&quot;</span>: <span class="hljs-string">&quot;^0.21.0&quot;</span>,
+    <span class="hljs-string">&quot;style-loader&quot;</span>: <span class="hljs-string">&quot;^0.13.0&quot;</span>,
+    <span class="hljs-string">&quot;webpack&quot;</span>: <span class="hljs-string">&quot;^1.12.2&quot;</span>
+  }
+}
 </code></pre>
 <p>&#x522B;&#x5FD8;&#x4E86;&#x8FD0;&#x884C; <code>npm install</code>&#x3002;</p>
 <p>&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <code>webpack.config.js</code>&#xFF1A;</p>
-<pre><code class="lang-js"><span class="token keyword">var</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;webpack&apos;</span><span class="token punctuation">)</span>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>)
 
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-  entry<span class="token punctuation">:</span> <span class="token string">&apos;./entry.js&apos;</span><span class="token punctuation">,</span>
-  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> __dirname<span class="token punctuation">,</span>
-    filename<span class="token punctuation">:</span> <span class="token string">&apos;bundle.js&apos;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    loaders<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>test<span class="token punctuation">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span> loader<span class="token punctuation">:</span> <span class="token string">&apos;style!css&apos;</span><span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<span class="hljs-built_in">module</span>.exports = {
+  entry: <span class="hljs-string">&apos;./entry.js&apos;</span>,
+  output: {
+    path: __dirname,
+    filename: <span class="hljs-string">&apos;bundle.js&apos;</span>
+  },
+  <span class="hljs-built_in">module</span>: {
+    loaders: [
+      {test: <span class="hljs-regexp">/\.css$/</span>, loader: <span class="hljs-string">&apos;style!css&apos;</span>}
+    ]
+  }
+}
 </code></pre>
 <p>&#x540C;&#x65F6;&#x7B80;&#x5316; <code>entry.js</code> &#x4E2D;&#x7684; <code>style.css</code> &#x52A0;&#x8F7D;&#x65B9;&#x5F0F;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;./style.css&apos;</span><span class="token punctuation">)</span>
+<pre><code class="lang-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./style.css&apos;</span>)
 </code></pre>
 <p>&#x6700;&#x540E;&#x8FD0;&#x884C; <code>webpack</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; webpack &#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x548C;&#x4E0A;&#x4E00;&#x7AE0;&#x8282;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C; <code>webpack entry.js bundle.js --module-bind &apos;css=style!css</code> &#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
 
@@ -426,7 +430,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    <script src="gitbook/plugins/gitbook-plugin-editlink/plugin.js"></script>
     
 
     
@@ -455,7 +459,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"disqus":{"shortName":"webpack-handbook"},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"edit-link":{"base":"https://github.com/zhaoda/webpack-handbook/edit/master/content","label":"编辑本页"},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"ad":{"contentBottom":"%3Cscript%20async%20src%3D%22//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js%22%3E%3C/script%3E%3C%21--%20%u81EA%u9002%u5E94%u9AD8%u53CD%u5DEE%u9ED1%u8272%20--%3E%3Cins%20class%3D%22adsbygoogle%22%20style%3D%22display%3Ablock%22%20data-ad-client%3D%22ca-pub-9798300025848807%22%20data-ad-slot%3D%228607007877%22%20data-ad-format%3D%22auto%22%3E%3C/ins%3E%3Cscript%3E%28adsbygoogle%20%3D%20window.adsbygoogle%20%7C%7C%20%5B%5D%29.push%28%7B%7D%29%3B%3C/script%3E%3C/p%3E%3Cdiv%20id%3D%22disqus_thread%22%3E%3C/div%3E%3Cscript%3E%28function%28%29%20%7Bvar%20d%20%3D%20document%2C%20s%20%3D%20d.createElement%28%27script%27%29%3Bs.src%20%3D%20%27//webpack-handbook.disqus.com/embed.js%27%3Bs.setAttribute%28%27data-timestamp%27%2C%20+new%20Date%28%29%29%3B%28d.head%20%7C%7C%20d.body%29.appendChild%28s%29%3B%7D%29%28%29%3B%3C/script%3E%3Cnoscript%3EPlease%20enable%20JavaScript%20to%20view%20the%20%3Ca%20href%3D%22https%3A//disqus.com/%3Fref_noscript%22%20rel%3D%22nofollow%22%3Ecomments%20powered%20by%20Disqus.%3C/a%3E%3C/noscript%3E"},"sitemap":{"hostname":"http://zhaoda.net/"},"prism":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/edit/master/content","label":"编辑本页","multilingual":false},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"ad":{"contentBottom":"%3Cscript%20async%20src%3D%22//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js%22%3E%3C/script%3E%3C%21--%20%u81EA%u9002%u5E94%u9AD8%u53CD%u5DEE%u9ED1%u8272%20--%3E%3Cins%20class%3D%22adsbygoogle%22%20style%3D%22display%3Ablock%22%20data-ad-client%3D%22ca-pub-9798300025848807%22%20data-ad-slot%3D%228607007877%22%20data-ad-format%3D%22auto%22%3E%3C/ins%3E%3Cscript%3E%28adsbygoogle%20%3D%20window.adsbygoogle%20%7C%7C%20%5B%5D%29.push%28%7B%7D%29%3B%3C/script%3E%3C/p%3E%3Cdiv%20id%3D%22disqus_thread%22%3E%3C/div%3E%3Cscript%3E%28function%28%29%20%7Bvar%20d%20%3D%20document%2C%20s%20%3D%20d.createElement%28%27script%27%29%3Bs.src%20%3D%20%27//webpack-handbook.disqus.com/embed.js%27%3Bs.setAttribute%28%27data-timestamp%27%2C%20+new%20Date%28%29%29%3B%28d.head%20%7C%7C%20d.body%29.appendChild%28s%29%3B%7D%29%28%29%3B%3C/script%3E%3Cnoscript%3EPlease%20enable%20JavaScript%20to%20view%20the%20%3Ca%20href%3D%22https%3A//disqus.com/%3Fref_noscript%22%20rel%3D%22nofollow%22%3Ecomments%20powered%20by%20Disqus.%3C/a%3E%3C/noscript%3E"},"sitemap":{"hostname":"http://zhaoda.net/"},"prism":{},"highlight":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

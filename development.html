@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -52,7 +56,7 @@
     <body>
         
         
-    <div class="book" data-level="2.6" data-chapter-title="开发环境" data-filepath="development.md" data-basepath="." data-revision="Sun Nov 15 2015 01:00:20 GMT+0800 (CST)">
+    <div class="book" data-level="2.6" data-chapter-title="开发环境" data-filepath="development.md" data-basepath="." data-revision="Sat Nov 21 2015 01:55:40 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -356,19 +360,19 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/zhaoda/webpack-handbook/edit/master/content/development.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;编辑本页</a><h1 id="&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x5F00;&#x53D1;&#x73AF;&#x5883;</h1>
+                        <h1 id="&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x5F00;&#x53D1;&#x73AF;&#x5883;</h1>
 <p>&#x5F53;&#x9879;&#x76EE;&#x9010;&#x6E10;&#x53D8;&#x5927;&#xFF0C;webpack &#x7684;&#x7F16;&#x8BD1;&#x65F6;&#x95F4;&#x4F1A;&#x53D8;&#x957F;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x8BA9;&#x7F16;&#x8BD1;&#x7684;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x5E26;&#x6709;&#x8FDB;&#x5EA6;&#x548C;&#x989C;&#x8272;&#x3002;</p>
-<pre><code class="lang-bash">$ webpack <span class="token operator">--</span>progress <span class="token operator">--</span>colors
+<pre><code class="lang-bash">$ webpack --progress --colors
 </code></pre>
 <p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x6BCF;&#x6B21;&#x4FEE;&#x6539;&#x6A21;&#x5757;&#x540E;&#x90FD;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x76D1;&#x542C;&#x6A21;&#x5F0F;&#x3002;&#x5F00;&#x542F;&#x76D1;&#x542C;&#x6A21;&#x5F0F;&#x540E;&#xFF0C;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#x7684;&#x6A21;&#x5757;&#x4F1A;&#x5728;&#x7F16;&#x8BD1;&#x540E;&#x7F13;&#x5B58;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x6BCF;&#x6B21;&#x90FD;&#x88AB;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF0C;&#x6240;&#x4EE5;&#x76D1;&#x542C;&#x6A21;&#x5F0F;&#x7684;&#x6574;&#x4F53;&#x901F;&#x5EA6;&#x662F;&#x5F88;&#x5FEB;&#x7684;&#x3002;</p>
-<pre><code class="lang-bash">$ webpack <span class="token operator">--</span>progress <span class="token operator">--</span>colors <span class="token operator">--</span><span class="token function">watch</span>
+<pre><code class="lang-bash">$ webpack --progress --colors --watch
 </code></pre>
 <p>&#x5F53;&#x7136;&#xFF0C;&#x4F7F;&#x7528; <code>webpack-dev-server</code> &#x5F00;&#x53D1;&#x670D;&#x52A1;&#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;&#x5B83;&#x5C06;&#x5728; localhost:8080 &#x542F;&#x52A8;&#x4E00;&#x4E2A; express &#x9759;&#x6001;&#x8D44;&#x6E90; web &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x4EE5;&#x76D1;&#x542C;&#x6A21;&#x5F0F;&#x81EA;&#x52A8;&#x8FD0;&#x884C; webpack&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00; <a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a> &#x6216; <a href="http://localhost:8080/webpack-dev-server/" target="_blank">http://localhost:8080/webpack-dev-server/</a> &#x53EF;&#x4EE5;&#x6D4F;&#x89C8;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x9875;&#x9762;&#x548C;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x8D44;&#x6E90;&#x8F93;&#x51FA;&#xFF0C;&#x5E76;&#x4E14;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; socket.io &#x670D;&#x52A1;&#x5B9E;&#x65BD;&#x76D1;&#x542C;&#x5B83;&#x4EEC;&#x7684;&#x53D8;&#x5316;&#x5E76;&#x81EA;&#x52A8;&#x5237;&#x65B0;&#x9875;&#x9762;&#x3002;</p>
-<pre><code class="lang-bash"><span class="token comment" spellcheck="true"># &#x5B89;&#x88C5;
-</span>$ npm <span class="token function">install</span> webpack<span class="token operator">-</span>dev<span class="token operator">-</span>server <span class="token operator">-</span>g
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5;</span>
+$ npm install webpack-dev-server -g
 
-<span class="token comment" spellcheck="true"># &#x8FD0;&#x884C;
-</span>$ webpack<span class="token operator">-</span>dev<span class="token operator">-</span>server <span class="token operator">--</span>progress <span class="token operator">--</span>colors
+<span class="hljs-comment"># &#x8FD0;&#x884C;</span>
+$ webpack-dev-server --progress --colors
 </code></pre>
 
                     
@@ -396,7 +400,7 @@
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    <script src="gitbook/plugins/gitbook-plugin-editlink/plugin.js"></script>
     
 
     
@@ -425,7 +429,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"disqus":{"shortName":"webpack-handbook"},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"edit-link":{"base":"https://github.com/zhaoda/webpack-handbook/edit/master/content","label":"编辑本页"},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"ad":{"contentBottom":"%3Cscript%20async%20src%3D%22//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js%22%3E%3C/script%3E%3C%21--%20%u81EA%u9002%u5E94%u9AD8%u53CD%u5DEE%u9ED1%u8272%20--%3E%3Cins%20class%3D%22adsbygoogle%22%20style%3D%22display%3Ablock%22%20data-ad-client%3D%22ca-pub-9798300025848807%22%20data-ad-slot%3D%228607007877%22%20data-ad-format%3D%22auto%22%3E%3C/ins%3E%3Cscript%3E%28adsbygoogle%20%3D%20window.adsbygoogle%20%7C%7C%20%5B%5D%29.push%28%7B%7D%29%3B%3C/script%3E%3C/p%3E%3Cdiv%20id%3D%22disqus_thread%22%3E%3C/div%3E%3Cscript%3E%28function%28%29%20%7Bvar%20d%20%3D%20document%2C%20s%20%3D%20d.createElement%28%27script%27%29%3Bs.src%20%3D%20%27//webpack-handbook.disqus.com/embed.js%27%3Bs.setAttribute%28%27data-timestamp%27%2C%20+new%20Date%28%29%29%3B%28d.head%20%7C%7C%20d.body%29.appendChild%28s%29%3B%7D%29%28%29%3B%3C/script%3E%3Cnoscript%3EPlease%20enable%20JavaScript%20to%20view%20the%20%3Ca%20href%3D%22https%3A//disqus.com/%3Fref_noscript%22%20rel%3D%22nofollow%22%3Ecomments%20powered%20by%20Disqus.%3C/a%3E%3C/noscript%3E"},"sitemap":{"hostname":"http://zhaoda.net/"},"prism":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/edit/master/content","label":"编辑本页","multilingual":false},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"ad":{"contentBottom":"%3Cscript%20async%20src%3D%22//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js%22%3E%3C/script%3E%3C%21--%20%u81EA%u9002%u5E94%u9AD8%u53CD%u5DEE%u9ED1%u8272%20--%3E%3Cins%20class%3D%22adsbygoogle%22%20style%3D%22display%3Ablock%22%20data-ad-client%3D%22ca-pub-9798300025848807%22%20data-ad-slot%3D%228607007877%22%20data-ad-format%3D%22auto%22%3E%3C/ins%3E%3Cscript%3E%28adsbygoogle%20%3D%20window.adsbygoogle%20%7C%7C%20%5B%5D%29.push%28%7B%7D%29%3B%3C/script%3E%3C/p%3E%3Cdiv%20id%3D%22disqus_thread%22%3E%3C/div%3E%3Cscript%3E%28function%28%29%20%7Bvar%20d%20%3D%20document%2C%20s%20%3D%20d.createElement%28%27script%27%29%3Bs.src%20%3D%20%27//webpack-handbook.disqus.com/embed.js%27%3Bs.setAttribute%28%27data-timestamp%27%2C%20+new%20Date%28%29%29%3B%28d.head%20%7C%7C%20d.body%29.appendChild%28s%29%3B%7D%29%28%29%3B%3C/script%3E%3Cnoscript%3EPlease%20enable%20JavaScript%20to%20view%20the%20%3Ca%20href%3D%22https%3A//disqus.com/%3Fref_noscript%22%20rel%3D%22nofollow%22%3Ecomments%20powered%20by%20Disqus.%3C/a%3E%3C/noscript%3E"},"sitemap":{"hostname":"http://zhaoda.net/"},"prism":{},"highlight":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>
