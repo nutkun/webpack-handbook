@@ -56,7 +56,7 @@
     <body>
         
         
-    <div class="book" data-level="2.2" data-chapter-title="使用" data-filepath="usage.md" data-basepath="." data-revision="Mon Dec 07 2015 23:42:56 GMT+0800 (CST)">
+    <div class="book" data-level="2.2" data-chapter-title="使用" data-filepath="usage.md" data-basepath="." data-revision="Fri Dec 18 2015 10:26:54 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -390,9 +390,9 @@ bundle.js  1.42 kB       0  [emitted]  main
 <pre><code class="lang-js"><span class="hljs-comment">// module.js</span>
 <span class="hljs-built_in">module</span>.exports = <span class="hljs-string">&apos;It works from module.js.&apos;</span>
 </code></pre>
-<pre><code class="lang-js">// entry.js
-document.write(&apos;It works.&apos;&apos;)
-document.write(require(&apos;./module.js&apos;)) // &#x6DFB;&#x52A0;&#x6A21;&#x5757;
+<pre><code class="lang-js"><span class="hljs-comment">// entry.js</span>
+<span class="hljs-built_in">document</span>.write(<span class="hljs-string">&apos;It works.&apos;</span>)
+<span class="hljs-built_in">document</span>.write(<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./module.js&apos;</span>)) <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x6A21;&#x5757;</span>
 </code></pre>
 <p>&#x91CD;&#x65B0;&#x6253;&#x5305; <code>webpack entry.js bundle.js</code> &#x540E;&#x5237;&#x65B0;&#x9875;&#x9762;&#x770B;&#x5230;&#x53D8;&#x5316; <code>It works.It works from module.js.</code></p>
 <pre><code>Hash: 279c7601d5d08396e751
