@@ -48,7 +48,7 @@ module.exports = 'It works from module.js.'
 ```js
 // entry.js
 document.write('It works.')
-document.write(require('./module.js')) // 添加模块
+require('./module.js') // 添加模块
 ```
 
 重新打包 `webpack entry.js bundle.js` 后刷新页面看到变化 `It works.It works from module.js.`
